@@ -9,7 +9,7 @@ app = FastAPI(title="Todo API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Vite dev server
+    allow_origins=["*"],  # will lock down to Vercel URL after deploy
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
